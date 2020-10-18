@@ -9,7 +9,7 @@ function getHierarchyRoots(flatSet) {
   return roots;
 }
 
-module.exports = function buildHierarchy(flatSet) {
+module.exports = (flatSet) => {
   const roots = getHierarchyRoots(flatSet);
   let depth = 2;
   let parentLevelStart = 0;
