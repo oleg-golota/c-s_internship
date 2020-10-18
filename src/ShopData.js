@@ -54,7 +54,7 @@ const product2 = {
   ],
   description: {description: 'contents long details'},
   rating: 0, reviewCounter: 0, purchaseCounter: 143,
-  categories: [zooGoods.children[0].children[0], zooGoods.children[0].children[1]]
+  categories: [zooGoods.children[0].children[2], zooGoods.children[1].children[4]]
 };
 
 const product3 = {
