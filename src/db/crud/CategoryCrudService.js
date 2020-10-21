@@ -1,5 +1,5 @@
 const { getConnection } = require('typeorm');
-const buildHierarchy = require('../helpers/HierarchyBuilder');
+const buildHierarchy = require('../../helpers/utils/HierarchyBuilder');
 
 function categoryHierarchyQuery(moveUp, condition) {
   return `WITH RECURSIVE ctg_it AS (
