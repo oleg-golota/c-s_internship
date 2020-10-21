@@ -27,7 +27,7 @@ exports.read = (id) => getRepository(ProductEntity).findOne({ where: { id } });
 
 exports.save = (prod) => getRepository(ProductEntity).save(prod);
 
-exports.remove = (id) => getRepository(ProductEntity).createQueryBuilder().delete().where('id = :id', { id })
+exports.delete = (id) => getRepository(ProductEntity).createQueryBuilder().delete().where('id = :id', { id })
   .execute();
 
 exports.getDescription = (id) => getRepository(ProductEntity).createQueryBuilder().relation('description').of(id)
