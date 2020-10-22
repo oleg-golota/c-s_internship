@@ -27,7 +27,7 @@ class ProductController {
   }
 
   update(req, res, next) {
-    if (req.body.id !== req.params.id) {
+    if (+req.body.id !== +req.params.id) {
       next(new Error('Inconsistent product Id'));
     } else {
       this.save(req, res, next);
