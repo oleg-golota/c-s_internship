@@ -1,6 +1,6 @@
 const console = require('console');
 const { createConnection } = require('typeorm');
-const ormconfig = require('./ormconfig');
+const ormconfig = require('./config/ormconfig');
 const CategoryEntity = require('./db/entities/CategoryEntity');
 const ProductEntity = require('./db/entities/ProductEntity');
 const { categories, products } = require('./ShopData');

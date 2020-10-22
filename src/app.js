@@ -2,7 +2,7 @@ const console = require('console');
 const { createConnection } = require('typeorm');
 const express = require('express');
 const http = require('http');
-const ormconfig = require('./ormconfig');
+const ormconfig = require('./config/ormconfig');
 
 const categoryCrudService = require('./db/crud/CategoryCrudService');
 const productCrudService = require('./db/crud/ProductCrudService');
