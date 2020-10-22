@@ -10,7 +10,12 @@ module.exports = new EntitySchema({
   },
   relations: {
     product: {
-      type: 'many-to-one', target: 'prod', inverseSide: 'photos', joinColumn: true, onDelete: 'CASCADE',
+      type: 'many-to-one',
+      target: 'prod',
+      inverseSide: 'photos',
+      joinColumn: true,
+      nullable: false,
+      onDelete: 'CASCADE',
     },
   },
 });
