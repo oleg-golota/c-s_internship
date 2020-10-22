@@ -2,10 +2,11 @@ const { getRepository } = require('typeorm');
 const ProductEntity = require('../entities/ProductEntity');
 const productSortOptions = require('../../helpers/dataFetchOptions/ProductSortOptions');
 
-exports.loadByCategory = (ctgId, searchOps) => {
+exports.loadByCategory = (ctgId, searchOps = {}) => {
   const queryBuilder = getRepository(ProductEntity).createQueryBuilder('prod')
     .leftJoinAndSelect('prod.categories', 'ctg')
     .leftJoinAndSelect('prod.samples', 'sample')
+    .leftJoinAndSelect('prod.photos', 'photo', 'photo.isMain = TRUE')
     .where('ctg.id = :id', { id: ctgId });
   if (searchOps.sortOption === productSortOptions.PRICE) {
     queryBuilder.orderBy('sample.price', 'ASC');
