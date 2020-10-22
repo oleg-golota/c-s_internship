@@ -6,7 +6,7 @@ class Reservation {
     this.lastName = undefined;
     this.phone = undefined;
     this.city = undefined;
-    this.productSamples = undefined;
+    this.items = undefined;
   }
 }
 

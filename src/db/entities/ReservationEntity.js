@@ -12,15 +12,8 @@ module.exports = new EntitySchema({
     city: { type: 'varchar', length: 16 },
   },
   relations: {
-    productSamples: {
-      type: 'many-to-many',
-      target: 'psam',
-      eager: true,
-      joinTable: {
-        name: 'RESERVATIONS_PRODUCTS_SAMPLES',
-        joinColumn: { name: 'RESERVATION_ID' },
-        inverseJoinColumn: { name: 'PROD_SAMPLE_ID' },
-      },
+    items: {
+      type: 'one-to-many', target: 'rsvi', inverseSide: 'reservation', eager: true, cascade: true,
     },
   },
 });
