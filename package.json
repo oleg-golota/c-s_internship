@@ -12,6 +12,8 @@
     "eslint-plugin-import": "^2.22.1"
   },
   "dependencies": {
+    "express": "^4.17.1",
+    "formidable": "^1.2.2",
     "pg": "^8.4.1",
     "typeorm": "^0.2.28"
   }
