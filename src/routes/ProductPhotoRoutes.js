@@ -2,7 +2,7 @@ const express = require('express');
 
 module.exports = (prodPhotoController) => {
   const router = express.Router();
-  router.get('/api/products/:id/photos', prodPhotoController.loadByProduct);
-  router.post('/api/products/:id/photos', prodPhotoController.addProductPhoto);
+  router.get('/products/:id/photos', prodPhotoController.loadByProduct.bind(prodPhotoController));
+  router.post('/products/:id/photos', prodPhotoController.addProductPhoto.bind(prodPhotoController));
   return router;
 };
