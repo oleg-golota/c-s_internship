@@ -4,6 +4,11 @@ see documentation in DB_structure.pdf in current folder.
 
 additionally:
 
+-- you should run initDatabase.js script before launching main app.js. As name suggests, this script creates 
+db schema and fills it with some test data from ShopData.js file. I turned off linting for ShopData.js 
+to make it more compact. Every further runs of initDatabase.js will drop exisitng schema with all stored 
+data and recreate schema from scratch.
+
 -- it would be much better to implement the project on TypeScript. I am used to it and had inconveniencies 
 at the beginning. Particularly, data models look strange in ES. I don't exactly know if you expected 
 such kind of data models or another.
